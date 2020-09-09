@@ -11,13 +11,14 @@ html {
 }
 
 * {
-  margin: 10;
-  padding: 10;
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
 header {
   text-align: center;
+  margin: 2em auto;
   h1 {
     font-size: 3.2rem;
     text-transform: uppercase;
@@ -25,6 +26,7 @@ header {
 }
 
 body {
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -40,33 +42,50 @@ h2 {
 
 #startRestart {
   font-family: inherit;
+  margin: 1em auto;
   padding: 0.75em 2em;
   font-size: 1.8rem;
   border-radius: 8px;
   outline: none;
   border: none;
-  background: $lightestred;
-  &:hover,
+  background: none;
+  box-shadow: 2px 2px 5px $darkred, -2px -2px 5px $lightered,
+    inset -2px -2px 5px $darkred, inset 2px 2px 5px $lightered;
+  &:active,
   &:focus {
-    background: $lightered;
+    box-shadow: 2px 2px 5px $darkred, -2px -2px 5px $lightered;
+    transform: translateY(2px);
+  }
+  &:hover {
+    cursor: pointer;
     font-weight: bold;
   }
 }
 
-.grid {
+.container {
   margin-top: 3em;
+  width: 32.5rem;
+  height: 32.5rem;
+  padding: 1em;
+  filter: drop-shadow(4px 4px 5px $darkred)
+    drop-shadow(-4px -4px 5px $lightered);
+  box-shadow: 4px 4px 10px $darkred, -4px -4px 8px $lightered,
+    inset -4px -4px 5px $darkred, inset 4px 4px 5px $lightered;
+}
+
+.grid {
+  margin: 0 auto;
   width: 30rem;
   height: 30rem;
   display: flex;
   flex-wrap: wrap;
-  box-shadow: 7px 7px 15px $lightered, -4px -4px 13px $lightered,
-    inset 4px 4px 8px $darkred, inset -8px -8px 8px $darkred;
+  filter: drop-shadow(1px 1px 2px $darkred)
+    drop-shadow(-1px -1px 2px $lightered);
 }
 
 .square {
   height: 1rem;
   width: 1rem;
-  background: $midred;
 }
 
 .snake {
@@ -74,7 +93,8 @@ h2 {
 }
 
 .apple {
-  background: #0000ff3a;
+  background: #0000ff80;
+  filter: drop-shadow(2px 2px 5px #0000ff) drop-shadow(-2px -2px 5px #0000ff1f);
 }
 
 .mob-direction {
@@ -131,26 +151,31 @@ h2 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 4em;
+    margin-top: 3em;
     button {
-      background: $darkred;
-      color: #fff;
+      width: 6.5rem;
+      height: 6.5rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: $midred;
+      font-weight: bold;
+      color: #000;
       padding: 1em;
-      margin: 0.5em;
+      margin: 0.1em;
       outline: none;
       border: none;
       border-radius: 50%;
-      box-shadow: 7px 7px 15px $lightered, -4px -4px 13px $lightered,
-        inset 4px 4px 8px $darkred, inset -8px -8px 8px $darkred;
-      &:hover,
+      box-shadow: 2px 2px 5px $darkred, -2px -2px 5px $lightered,
+        inset -2px -2px 5px $darkred, inset 2px 2px 5px $lightered;
+      &:active,
       &:focus {
-        box-shadow: 4px 2px 18px $lightered, -4px -4px 13px $lightered,
-          inset 6px 6px 16px $darkred, inset -8px -8px 8px $midred;
+        box-shadow: 2px 2px 5px $darkred, -2px -2px 5px $lightered;
         transform: translateY(2px);
       }
     }
     .leftRight {
-      width: 19rem;
+      width: 20rem;
       display: flex;
       justify-content: space-between;
     }

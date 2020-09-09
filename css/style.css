@@ -4,14 +4,15 @@ html {
 }
 
 * {
-  margin: 10;
-  padding: 10;
+  margin: 0;
+  padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
 
 header {
   text-align: center;
+  margin: 2em auto;
 }
 
 header h1 {
@@ -20,6 +21,7 @@ header h1 {
 }
 
 body {
+  min-height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -42,21 +44,42 @@ h2 {
 
 #startRestart {
   font-family: inherit;
+  margin: 1em auto;
   padding: 0.75em 2em;
   font-size: 1.8rem;
   border-radius: 8px;
   outline: none;
   border: none;
-  background: #ff9e80;
+  background: none;
+  -webkit-box-shadow: 2px 2px 5px #dd2c00, -2px -2px 5px #ff6e40, inset -2px -2px 5px #dd2c00, inset 2px 2px 5px #ff6e40;
+          box-shadow: 2px 2px 5px #dd2c00, -2px -2px 5px #ff6e40, inset -2px -2px 5px #dd2c00, inset 2px 2px 5px #ff6e40;
 }
 
-#startRestart:hover, #startRestart:focus {
-  background: #ff6e40;
+#startRestart:active, #startRestart:focus {
+  -webkit-box-shadow: 2px 2px 5px #dd2c00, -2px -2px 5px #ff6e40;
+          box-shadow: 2px 2px 5px #dd2c00, -2px -2px 5px #ff6e40;
+  -webkit-transform: translateY(2px);
+          transform: translateY(2px);
+}
+
+#startRestart:hover {
+  cursor: pointer;
   font-weight: bold;
 }
 
-.grid {
+.container {
   margin-top: 3em;
+  width: 32.5rem;
+  height: 32.5rem;
+  padding: 1em;
+  -webkit-filter: drop-shadow(4px 4px 5px #dd2c00) drop-shadow(-4px -4px 5px #ff6e40);
+          filter: drop-shadow(4px 4px 5px #dd2c00) drop-shadow(-4px -4px 5px #ff6e40);
+  -webkit-box-shadow: 4px 4px 10px #dd2c00, -4px -4px 8px #ff6e40, inset -4px -4px 5px #dd2c00, inset 4px 4px 5px #ff6e40;
+          box-shadow: 4px 4px 10px #dd2c00, -4px -4px 8px #ff6e40, inset -4px -4px 5px #dd2c00, inset 4px 4px 5px #ff6e40;
+}
+
+.grid {
+  margin: 0 auto;
   width: 30rem;
   height: 30rem;
   display: -webkit-box;
@@ -64,14 +87,13 @@ h2 {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-shadow: 7px 7px 15px #ff6e40, -4px -4px 13px #ff6e40, inset 4px 4px 8px #dd2c00, inset -8px -8px 8px #dd2c00;
-          box-shadow: 7px 7px 15px #ff6e40, -4px -4px 13px #ff6e40, inset 4px 4px 8px #dd2c00, inset -8px -8px 8px #dd2c00;
+  -webkit-filter: drop-shadow(1px 1px 2px #dd2c00) drop-shadow(-1px -1px 2px #ff6e40);
+          filter: drop-shadow(1px 1px 2px #dd2c00) drop-shadow(-1px -1px 2px #ff6e40);
 }
 
 .square {
   height: 1rem;
   width: 1rem;
-  background: #ff3d00;
 }
 
 .snake {
@@ -79,7 +101,9 @@ h2 {
 }
 
 .apple {
-  background: #0000ff3a;
+  background: #0000ff80;
+  -webkit-filter: drop-shadow(2px 2px 5px #0000ff) drop-shadow(-2px -2px 5px #0000ff1f);
+          filter: drop-shadow(2px 2px 5px #0000ff) drop-shadow(-2px -2px 5px #0000ff1f);
 }
 
 .mob-direction {
@@ -166,27 +190,39 @@ h2 {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    margin-top: 4em;
+    margin-top: 3em;
   }
   .mob-direction button {
-    background: #dd2c00;
-    color: #fff;
+    width: 6.5rem;
+    height: 6.5rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    background: #ff3d00;
+    font-weight: bold;
+    color: #000;
     padding: 1em;
-    margin: 0.5em;
+    margin: 0.1em;
     outline: none;
     border: none;
     border-radius: 50%;
-    -webkit-box-shadow: 7px 7px 15px #ff6e40, -4px -4px 13px #ff6e40, inset 4px 4px 8px #dd2c00, inset -8px -8px 8px #dd2c00;
-            box-shadow: 7px 7px 15px #ff6e40, -4px -4px 13px #ff6e40, inset 4px 4px 8px #dd2c00, inset -8px -8px 8px #dd2c00;
+    -webkit-box-shadow: 2px 2px 5px #dd2c00, -2px -2px 5px #ff6e40, inset -2px -2px 5px #dd2c00, inset 2px 2px 5px #ff6e40;
+            box-shadow: 2px 2px 5px #dd2c00, -2px -2px 5px #ff6e40, inset -2px -2px 5px #dd2c00, inset 2px 2px 5px #ff6e40;
   }
-  .mob-direction button:hover, .mob-direction button:focus {
-    -webkit-box-shadow: 4px 2px 18px #ff6e40, -4px -4px 13px #ff6e40, inset 6px 6px 16px #dd2c00, inset -8px -8px 8px #ff3d00;
-            box-shadow: 4px 2px 18px #ff6e40, -4px -4px 13px #ff6e40, inset 6px 6px 16px #dd2c00, inset -8px -8px 8px #ff3d00;
+  .mob-direction button:active, .mob-direction button:focus {
+    -webkit-box-shadow: 2px 2px 5px #dd2c00, -2px -2px 5px #ff6e40;
+            box-shadow: 2px 2px 5px #dd2c00, -2px -2px 5px #ff6e40;
     -webkit-transform: translateY(2px);
             transform: translateY(2px);
   }
   .mob-direction .leftRight {
-    width: 19rem;
+    width: 20rem;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
