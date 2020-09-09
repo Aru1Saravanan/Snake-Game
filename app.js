@@ -13,7 +13,7 @@ let width = 30;
 let appleIndex = 0;
 let timer = 750;
 let score = 0;
-let highScoreArr = [parseInt(localStorage.getItem("PlayerHighscore"))];
+let highScoreArr = [parseInt(sessionStorage.getItem("PlayerHighscore"))];
 let timerID = 0;
 const speed = 0.9;
 highScoreBoard.textContent = highScoreArr[0];
@@ -39,7 +39,7 @@ function startGame() {
     highScoreArr.push(score);
     highScoreBoard.textContent = Math.max(...highScoreArr);
     //saving highscore on local storage
-    localStorage.setItem("PlayerHighscore", JSON.stringify(Math.max(...highScoreArr)));
+    sessionStorage.setItem("PlayerHighscore", JSON.stringify(Math.max(...highScoreArr)));
 
     score = 0;
     scoreBoard.textContent = score;
