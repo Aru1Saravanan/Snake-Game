@@ -6,6 +6,8 @@ const upBtn = document.getElementById("up");
 const leftBtn = document.getElementById("left");
 const rightBtn = document.getElementById("right");
 const downBtn = document.getElementById("down");
+const gameOver = document.querySelector(".gamOVerModal");
+const gameOverBtn = document.querySelector(".close");
 let squares = [];
 let currentSnake = [2, 1, 0];
 let direction = 1;
@@ -61,6 +63,7 @@ function moveSnake() {
         (currentSnake[0] % width === 0 && direction === -1) ||
         (currentSnake[0] - width < 0 && direction === -width) ||
         squares[currentSnake[0] + direction].classList.contains('snake')) {
+        gameOver.style.visibility = "visible";
         return clearInterval(timerID);
     }
 
@@ -72,7 +75,7 @@ function moveSnake() {
     //snake eating apple
     if (squares[currentSnake[0]].classList.contains('apple')) {
         squares[currentSnake[0]].classList.remove("apple");
-        squares[tail].classList.add('snake')
+        squares[tail].classList.add('snake');
         currentSnake.push(tail);
         generateApples();
         score++;
@@ -117,3 +120,4 @@ upBtn.addEventListener("click", () => { direction = -width; });
 leftBtn.addEventListener("click", () => { direction = -1; });
 rightBtn.addEventListener("click", () => { direction = 1; });
 downBtn.addEventListener("click", () => { direction = width; });
+gameOverBtn.addEventListener("click", () => { gameOver.style.visibility = "hidden"; });

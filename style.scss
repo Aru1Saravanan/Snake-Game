@@ -30,6 +30,7 @@ body {
   align-items: center;
   background: $midred;
   font-family: "Quicksand", sans-serif;
+  position: relative;
 }
 
 h2 {
@@ -42,10 +43,6 @@ h2 {
   padding: 0.75em 2em;
   font-size: 1.8rem;
   border-radius: 8px;
-  -webkit-border-radius: 8px;
-  -moz-border-radius: 8px;
-  -ms-border-radius: 8px;
-  -o-border-radius: 8px;
   outline: none;
   border: none;
   background: $lightestred;
@@ -77,11 +74,54 @@ h2 {
 }
 
 .apple {
-  background: #370042;
+  background: #0000ff3a;
 }
 
 .mob-direction {
   visibility: hidden;
+}
+
+.gamOVerModal {
+  position: absolute;
+  z-index: 10;
+  background: #ebb2a056;
+  min-height: 90vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  visibility: hidden;
+}
+
+.gameoverBox {
+  background: $lightestred;
+  width: 25rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2em 4em;
+  border-radius: 10px;
+  h2 {
+    font-size: 2.2rem;
+    margin: 0;
+  }
+  button {
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
+    outline: none;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    cursor: pointer;
+    &:hover,
+    &:focus {
+      color: #fff;
+    }
+  }
 }
 
 @media (hover: none) and (pointer: coarse) {
@@ -100,10 +140,6 @@ h2 {
       outline: none;
       border: none;
       border-radius: 50%;
-      -webkit-border-radius: 50%;
-      -moz-border-radius: 50%;
-      -ms-border-radius: 50%;
-      -o-border-radius: 50%;
       box-shadow: 7px 7px 15px $lightered, -4px -4px 13px $lightered,
         inset 4px 4px 8px $darkred, inset -8px -8px 8px $darkred;
       &:hover,
@@ -111,10 +147,6 @@ h2 {
         box-shadow: 4px 2px 18px $lightered, -4px -4px 13px $lightered,
           inset 6px 6px 16px $darkred, inset -8px -8px 8px $midred;
         transform: translateY(2px);
-        -webkit-transform: translateY(2px);
-        -moz-transform: translateY(2px);
-        -ms-transform: translateY(2px);
-        -o-transform: translateY(2px);
       }
     }
     .leftRight {
@@ -122,5 +154,19 @@ h2 {
       display: flex;
       justify-content: space-between;
     }
+  }
+}
+
+footer {
+  margin: 2em 0 1em 0;
+  font-size: 1.8rem;
+  text-decoration: none;
+  i {
+    color: #fff;
+  }
+  .iclass {
+    color: #fff;
+    font-family: "Quicksand", sans-serif;
+    margin-left: 0.5em;
   }
 }

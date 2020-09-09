@@ -32,6 +32,7 @@ body {
           align-items: center;
   background: #ff3d00;
   font-family: "Quicksand", sans-serif;
+  position: relative;
 }
 
 h2 {
@@ -44,10 +45,6 @@ h2 {
   padding: 0.75em 2em;
   font-size: 1.8rem;
   border-radius: 8px;
-  -webkit-border-radius: 8px;
-  -moz-border-radius: 8px;
-  -ms-border-radius: 8px;
-  -o-border-radius: 8px;
   outline: none;
   border: none;
   background: #ff9e80;
@@ -82,11 +79,75 @@ h2 {
 }
 
 .apple {
-  background: #370042;
+  background: #0000ff3a;
 }
 
 .mob-direction {
   visibility: hidden;
+}
+
+.gamOVerModal {
+  position: absolute;
+  z-index: 10;
+  background: #ebb2a056;
+  min-height: 90vh;
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  visibility: hidden;
+}
+
+.gameoverBox {
+  background: #ff9e80;
+  width: 25rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 2em 4em;
+  border-radius: 10px;
+}
+
+.gameoverBox h2 {
+  font-size: 2.2rem;
+  margin: 0;
+}
+
+.gameoverBox button {
+  height: 3rem;
+  width: 3rem;
+  border-radius: 50%;
+  outline: none;
+  border: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: transparent;
+  cursor: pointer;
+}
+
+.gameoverBox button:hover, .gameoverBox button:focus {
+  color: #fff;
 }
 
 @media (hover: none) and (pointer: coarse) {
@@ -115,21 +176,14 @@ h2 {
     outline: none;
     border: none;
     border-radius: 50%;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    -ms-border-radius: 50%;
-    -o-border-radius: 50%;
     -webkit-box-shadow: 7px 7px 15px #ff6e40, -4px -4px 13px #ff6e40, inset 4px 4px 8px #dd2c00, inset -8px -8px 8px #dd2c00;
             box-shadow: 7px 7px 15px #ff6e40, -4px -4px 13px #ff6e40, inset 4px 4px 8px #dd2c00, inset -8px -8px 8px #dd2c00;
   }
   .mob-direction button:hover, .mob-direction button:focus {
     -webkit-box-shadow: 4px 2px 18px #ff6e40, -4px -4px 13px #ff6e40, inset 6px 6px 16px #dd2c00, inset -8px -8px 8px #ff3d00;
             box-shadow: 4px 2px 18px #ff6e40, -4px -4px 13px #ff6e40, inset 6px 6px 16px #dd2c00, inset -8px -8px 8px #ff3d00;
-    transform: translateY(2px);
     -webkit-transform: translateY(2px);
-    -moz-transform: translateY(2px);
-    -ms-transform: translateY(2px);
-    -o-transform: translateY(2px);
+            transform: translateY(2px);
   }
   .mob-direction .leftRight {
     width: 19rem;
@@ -140,4 +194,20 @@ h2 {
         -ms-flex-pack: justify;
             justify-content: space-between;
   }
+}
+
+footer {
+  margin: 2em 0 1em 0;
+  font-size: 1.8rem;
+  text-decoration: none;
+}
+
+footer i {
+  color: #fff;
+}
+
+footer .iclass {
+  color: #fff;
+  font-family: "Quicksand", sans-serif;
+  margin-left: 0.5em;
 }
