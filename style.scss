@@ -1,0 +1,126 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@500;600;700&display=swap");
+
+//background
+$darkred: #dd2c00;
+$midred: #ff3d00;
+$lightered: #ff6e40;
+$lightestred: #ff9e80;
+
+html {
+  font-size: 10px;
+}
+
+* {
+  margin: 10;
+  padding: 10;
+  box-sizing: border-box;
+}
+
+header {
+  text-align: center;
+  h1 {
+    font-size: 3.2rem;
+    text-transform: uppercase;
+  }
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: $midred;
+  font-family: "Quicksand", sans-serif;
+}
+
+h2 {
+  font-size: 1.8rem;
+  margin-bottom: 0;
+}
+
+#startRestart {
+  font-family: inherit;
+  padding: 0.75em 2em;
+  font-size: 1.8rem;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+  outline: none;
+  border: none;
+  background: $lightestred;
+  &:hover,
+  &:focus {
+    background: $lightered;
+    font-weight: bold;
+  }
+}
+
+.grid {
+  margin-top: 3em;
+  width: 30rem;
+  height: 30rem;
+  display: flex;
+  flex-wrap: wrap;
+  box-shadow: 7px 7px 15px $lightered, -4px -4px 13px $lightered,
+    inset 4px 4px 8px $darkred, inset -8px -8px 8px $darkred;
+}
+
+.square {
+  height: 1rem;
+  width: 1rem;
+  background: $midred;
+}
+
+.snake {
+  background: $darkred;
+}
+
+.apple {
+  background: #370042;
+}
+
+.mob-direction {
+  visibility: hidden;
+}
+
+@media (hover: none) and (pointer: coarse) {
+  .mob-direction {
+    visibility: visible;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 4em;
+    button {
+      background: $darkred;
+      color: #fff;
+      padding: 1em;
+      margin: 0.5em;
+      outline: none;
+      border: none;
+      border-radius: 50%;
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      -ms-border-radius: 50%;
+      -o-border-radius: 50%;
+      box-shadow: 7px 7px 15px $lightered, -4px -4px 13px $lightered,
+        inset 4px 4px 8px $darkred, inset -8px -8px 8px $darkred;
+      &:hover,
+      &:focus {
+        box-shadow: 4px 2px 18px $lightered, -4px -4px 13px $lightered,
+          inset 6px 6px 16px $darkred, inset -8px -8px 8px $midred;
+        transform: translateY(2px);
+        -webkit-transform: translateY(2px);
+        -moz-transform: translateY(2px);
+        -ms-transform: translateY(2px);
+        -o-transform: translateY(2px);
+      }
+    }
+    .leftRight {
+      width: 19rem;
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+}

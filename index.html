@@ -9,7 +9,35 @@
 </head>
 
 <body>
-
+    <header>
+        <h1 id="title">Snake Game</h1>
+    </header>
+    <button id="startRestart">Start | Restart</button>
+    <h2 id="highScoreBoard">High Score: <span id="highScore">0</span></h2>
+    <h2 id="scoreBoard">Score: <span id="score">0</span></h2>
+    <div class="grid"></div>
+    <div class="mob-direction">
+        <div class="up"><button id="up"><svg width="1.5em" height="1.5em" viewBox="0 0 16 16" class="bi bi-arrow-up"
+                    fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd"
+                        d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z" />
+                </svg></button></div>
+        <div class="leftRight"><button id="left"><svg width="1.5em" height="1.5em" viewBox="0 0 16 16"
+                    class="bi bi-arrow-left" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd"
+                        d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z" />
+                </svg></button><button id="right"><svg width="1.5em" height="1.5em" viewBox="0 0 16 16"
+                    class="bi bi-arrow-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd"
+                        d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+                </svg></button></div>
+        <div class="down"><button id="down"><svg width="1.5em" height="1.5em" viewBox="0 0 16 16"
+                    class="bi bi-arrow-down" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd"
+                        d="M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1z" />
+                </svg></button></div>
+    </div>
+    <script src="app.js"></script>
 </body>
 
 </html>
