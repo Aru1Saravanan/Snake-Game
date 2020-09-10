@@ -51,9 +51,9 @@ h2 {
   background: none;
   box-shadow: 2px 2px 5px $darkred, -2px -2px 5px $lightered,
     inset -2px -2px 5px $darkred, inset 2px 2px 5px $lightered;
-  &:active,
-  &:focus {
-    box-shadow: 2px 2px 5px $darkred, -2px -2px 5px $lightered;
+  transition: all 0.25s ease;
+  &:active {
+    box-shadow: inset 2px 2px 5px $darkred, inset -2px -2px 5px $lightered;
     transform: translateY(2px);
   }
   &:hover {
@@ -79,8 +79,8 @@ h2 {
   height: 30rem;
   display: flex;
   flex-wrap: wrap;
-  filter: drop-shadow(1px 1px 2px $darkred)
-    drop-shadow(-1px -1px 2px $lightered);
+  filter: drop-shadow(1px 1px 2px #6f160083)
+    drop-shadow(-1px -1px 2px #971e0093);
 }
 
 .square {
@@ -89,12 +89,12 @@ h2 {
 }
 
 .snake {
-  background: $darkred;
+  background: #831a00;
 }
 
 .apple {
-  background: #0000ff80;
-  filter: drop-shadow(2px 2px 5px #0000ff) drop-shadow(-2px -2px 5px #0000ff1f);
+  border-radius: 50%;
+  background: #831a00;
 }
 
 .mob-direction {
@@ -137,8 +137,7 @@ h2 {
     align-items: center;
     background: transparent;
     cursor: pointer;
-    &:hover,
-    &:focus {
+    &:active {
       color: #fff;
     }
   }
@@ -168,17 +167,17 @@ h2 {
       border-radius: 50%;
       box-shadow: 2px 2px 5px $darkred, -2px -2px 5px $lightered,
         inset -2px -2px 5px $darkred, inset 2px 2px 5px $lightered;
-      &:active,
-      &:focus {
-        box-shadow: 2px 2px 5px $darkred, -2px -2px 5px $lightered;
+      transition: all 0.25s ease;
+      &:active {
+        box-shadow: inset 2px 2px 5px $darkred, inset -2px -2px 5px $lightered;
         transform: translateY(2px);
       }
     }
-    .leftRight {
-      width: 20rem;
-      display: flex;
-      justify-content: space-between;
-    }
+  }
+  .leftRight {
+    width: 20rem;
+    display: flex;
+    justify-content: space-between;
   }
 }
 

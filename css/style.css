@@ -53,11 +53,13 @@ h2 {
   background: none;
   -webkit-box-shadow: 2px 2px 5px #dd2c00, -2px -2px 5px #ff6e40, inset -2px -2px 5px #dd2c00, inset 2px 2px 5px #ff6e40;
           box-shadow: 2px 2px 5px #dd2c00, -2px -2px 5px #ff6e40, inset -2px -2px 5px #dd2c00, inset 2px 2px 5px #ff6e40;
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
 }
 
-#startRestart:active, #startRestart:focus {
-  -webkit-box-shadow: 2px 2px 5px #dd2c00, -2px -2px 5px #ff6e40;
-          box-shadow: 2px 2px 5px #dd2c00, -2px -2px 5px #ff6e40;
+#startRestart:active {
+  -webkit-box-shadow: inset 2px 2px 5px #dd2c00, inset -2px -2px 5px #ff6e40;
+          box-shadow: inset 2px 2px 5px #dd2c00, inset -2px -2px 5px #ff6e40;
   -webkit-transform: translateY(2px);
           transform: translateY(2px);
 }
@@ -87,8 +89,8 @@ h2 {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-filter: drop-shadow(1px 1px 2px #dd2c00) drop-shadow(-1px -1px 2px #ff6e40);
-          filter: drop-shadow(1px 1px 2px #dd2c00) drop-shadow(-1px -1px 2px #ff6e40);
+  -webkit-filter: drop-shadow(1px 1px 2px #6f160083) drop-shadow(-1px -1px 2px #971e0093);
+          filter: drop-shadow(1px 1px 2px #6f160083) drop-shadow(-1px -1px 2px #971e0093);
 }
 
 .square {
@@ -97,13 +99,12 @@ h2 {
 }
 
 .snake {
-  background: #dd2c00;
+  background: #831a00;
 }
 
 .apple {
-  background: #0000ff80;
-  -webkit-filter: drop-shadow(2px 2px 5px #0000ff) drop-shadow(-2px -2px 5px #0000ff1f);
-          filter: drop-shadow(2px 2px 5px #0000ff) drop-shadow(-2px -2px 5px #0000ff1f);
+  border-radius: 50%;
+  background: #831a00;
 }
 
 .mob-direction {
@@ -170,7 +171,7 @@ h2 {
   cursor: pointer;
 }
 
-.gameoverBox button:hover, .gameoverBox button:focus {
+.gameoverBox button:active {
   color: #fff;
 }
 
@@ -214,14 +215,16 @@ h2 {
     border-radius: 50%;
     -webkit-box-shadow: 2px 2px 5px #dd2c00, -2px -2px 5px #ff6e40, inset -2px -2px 5px #dd2c00, inset 2px 2px 5px #ff6e40;
             box-shadow: 2px 2px 5px #dd2c00, -2px -2px 5px #ff6e40, inset -2px -2px 5px #dd2c00, inset 2px 2px 5px #ff6e40;
+    -webkit-transition: all 0.25s ease;
+    transition: all 0.25s ease;
   }
-  .mob-direction button:active, .mob-direction button:focus {
-    -webkit-box-shadow: 2px 2px 5px #dd2c00, -2px -2px 5px #ff6e40;
-            box-shadow: 2px 2px 5px #dd2c00, -2px -2px 5px #ff6e40;
+  .mob-direction button:active {
+    -webkit-box-shadow: inset 2px 2px 5px #dd2c00, inset -2px -2px 5px #ff6e40;
+            box-shadow: inset 2px 2px 5px #dd2c00, inset -2px -2px 5px #ff6e40;
     -webkit-transform: translateY(2px);
             transform: translateY(2px);
   }
-  .mob-direction .leftRight {
+  .leftRight {
     width: 20rem;
     display: -webkit-box;
     display: -ms-flexbox;
