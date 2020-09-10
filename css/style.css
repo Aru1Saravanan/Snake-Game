@@ -76,8 +76,8 @@ h2 {
   padding: 1em;
   -webkit-filter: drop-shadow(4px 4px 5px #dd2c00) drop-shadow(-4px -4px 5px #ff6e40);
           filter: drop-shadow(4px 4px 5px #dd2c00) drop-shadow(-4px -4px 5px #ff6e40);
-  -webkit-box-shadow: 4px 4px 10px #dd2c00, -4px -4px 8px #ff6e40, inset -4px -4px 5px #dd2c00, inset 4px 4px 5px #ff6e40;
-          box-shadow: 4px 4px 10px #dd2c00, -4px -4px 8px #ff6e40, inset -4px -4px 5px #dd2c00, inset 4px 4px 5px #ff6e40;
+  -webkit-box-shadow: 4px 4px 5px #dd2c00, -3px -3px 5px #ff6e40, inset -4px -4px 5px #dd2c00, inset 4px 4px 5px #ff6e40;
+          box-shadow: 4px 4px 5px #dd2c00, -3px -3px 5px #ff6e40, inset -4px -4px 5px #dd2c00, inset 4px 4px 5px #ff6e40;
 }
 
 .grid {
